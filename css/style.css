@@ -1,0 +1,59 @@
+body {
+    background-color:aliceblue;
+}
+.title {
+    margin-top: 50px;
+}
+.textBox {
+    border: none;
+    width: 290px;
+    height: 35px;
+    background-color: #55555505;
+    position: absolute;
+    left: 44px;
+}
+.imges {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+}
+.text {
+    margin: 15px auto 0px;
+    width: 330px;
+    height: 35px;
+    background-color: #d3d3d363;
+    position: relative;
+}
+input#ActivateBtn {
+    background-color: blueviolet;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    font-size:17px;
+    color:white;
+}
+.btn{
+    margin: 30px auto 0px;
+    width: 330px;
+    height: 35px;
+
+    position: relative;
+}
+.btn.text-center {
+    margin-left: 90px;
+}
+.smallBox {
+    width: 215px;
+    height: 205px;
+    background-color: white;
+    border-radius: 10px;
+}
+.image-in-small-box {
+    margin: 5px 60px;
+}
+@media screen and (max-width: 500px) {
+    .orderlastSm {
+        -ms-flex-order: -1;
+        order: -1;
+    }
+}

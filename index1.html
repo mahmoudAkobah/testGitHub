@@ -1,0 +1,156 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Sign_up.aspx.cs" Inherits="task1.Sign_up" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body >
+<form id="form2" runat="server">
+
+
+
+    <div class="container">
+        <div class="row no-gutters ">
+            <div class="col-sm-12 text-center text-uppercase ">
+                <div class="title">
+                    <h1> <strong><u>Free sign up</u></strong></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-12 col-md-6 " style="margin-top:30px;">
+                <div class="col-12 col-md-6 orderlastSm" style="margin-top:30px;">
+                    <div class="text-uppercase text-center text-success">
+                        <h5> <b>
+                            sign up now and get started
+                        </b></h5>
+
+                    </div>
+                    <div class="text-center ">
+                        <h4>  please enter your account information</h4>
+                    </div>
+                    <div class="text text-center">
+                        <input type="text" id="fullNameTxt" placeholder="Full Name" class="textBox"  />
+                        <img src="Icons/name_icon.png" id="NameIcon" class="imges"/>
+
+
+                    </div>
+                    <div class="text-center"  id="fullnamelbl"  style="display:none">
+
+                        <label  class="text-danger"> full name cannt be empty</label>
+                    </div>
+                    <div class="text-center" id="fullnameH"  style="display:none">
+                        <label class="text-danger" > full name must have only character</label>
+                    </div>
+                    <div class="text text-center">
+                        <input type="text" id="emailTxt" placeholder="Email" class="textBox"  />
+                        <img src="Icons/email_icon.png" id="EmailIcon" class="imges"/>
+
+                        <h4 style="display:none" id="emaillbl">Email cannt be empty</h4>
+
+                        <h4 style="display:none" id="emailH">must be valid email</h4>
+                    </div>
+                    <div class="text text-center">
+                        <input type="text" id="passwordTxt" placeholder="Password" class="textBox"  />
+                        <img src="Icons/password_icon.png" id="PasswordIcon" class="imges"/>
+                        <h4 style="display:none" id="passwordlbl">password cannot be empty</h4>
+                        <h4 style="display:none" id="passwordH">password must be at least 6 character </h4>
+                    </div>
+                    <div class="text text-center">
+                        <input type="text" id="ConfirmpasswordTxt" placeholder="Confirm Password" class="textBox"  />
+                        <img src="Icons/password_icon.png" id="ConfirmPasswordIcon" class="imges"/>
+
+                        <h4 style="display:none" id="Cpasswordlbl">password cannot be empty</h4>
+                        <h4 style="display:none" id="CpasswordH">password must be at least 6 character </h4>
+                        <h4 style="display:none" id="Confirmpass">not match</h4>
+                    </div>
+                    <div class="btn text-center">
+                        <asp:Button runat="server" ID="ActivateBtn" Text="Activate Now" />
+                    </div>
+
+                </div>
+                <div >
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-sm-12 col-md-6 " style="padding-left:10px">
+                            <div class="text-center smallBox">
+                                <img src="Icons/aws_check_icon.png" id="aws_check" class="image-in-small-box"/>
+                                <p class="text-center text-capitalize">
+                                    <b>  AWS Advanced technology partner</b>
+                                </p>
+                                <p>
+                                    Zoolz levarges the robust and reliable Amazon Cloud  trusted by million
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 " style="padding-left:10px">
+                            <div class="text-center smallBox">
+                                <img src="Icons/backup_tech_icon.png" id="bakeup" class="image-in-small-box"/>
+                                <p class="text-center text-capitalize">
+                                    <b>  AWS Advanced technology partner</b>
+                                </p>
+                                <p>
+                                    Zoolz levarges the robust and reliable Amazon Cloud  trusted by million
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-between">
+                        <div class="col-12 col-sm-12 col-md-6   " style="padding-left:10px">
+                            <div class="text-center smallBox">
+                                <img src="Icons/secure_icon.png" id="secure" class="image-in-small-box"/>
+                                <p class="text-center text-capitalize">
+                                    <b>  AWS Advanced technology partner</b>
+                                </p>
+                                <p>
+                                    Zoolz levarges the robust and reliable Amazon Cloud  trusted by million
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 " style="padding-left:10px">
+                            <div class="text-center smallBox">
+                                <img src="Icons/everything_icon.png" id="everything" class="image-in-small-box"/>
+                                <p class="text-center text-capitalize">
+                                    <b>  AWS Advanced technology partner</b>
+                                </p>
+                                <p>
+                                    Zoolz levarges the robust and reliable Amazon Cloud  trusted by million
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</form>
+</body>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#fullNameTxt").blur(function () {
+            var name = $(this).val();
+            var regex = /^[a-zA-Z]+$/;
+            if (!name.match(regex)) {
+                $("#fullnameH").css("display", "block");
+            }
+        });
+        $("#fullNameTxt").focus(function () {
+
+            $("#fullnameH").css("display", "none");
+        });
+
+    })
+</script>
+</html>

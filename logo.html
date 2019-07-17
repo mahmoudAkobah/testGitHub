@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pepsi logo</title>
+    <style>
+        html {
+            height: 100%
+        ;}
+        body {
+            height: 100%;
+            background: #34588e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            background: #014983;
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            border: 10px solid #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .logo:before {
+            border-radius: 25%;
+            background: #fff;
+            height: 500px;
+            width: 600px;
+            content: "";
+            position: absolute;
+            top: -170px;
+            left: -240px;
+            transform: rotate(-15deg);
+            z-index: 1;
+        }
+        .logo:after {
+            border-radius: 100%;
+            background: #F7212B;
+            height: 600px;
+            width: 650px;
+            content: "";
+            position: absolute;
+            top: -275px;
+            left: -300px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="logo"></div>
+</body>
+</html>
